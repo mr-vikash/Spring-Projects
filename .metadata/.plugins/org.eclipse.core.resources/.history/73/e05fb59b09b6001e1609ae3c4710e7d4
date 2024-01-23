@@ -1,0 +1,27 @@
+package com.coder;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.coder.dao.UserRepository;
+import com.coder.entities.User;
+
+
+@SpringBootApplication
+public class JpaSpringProjectApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(JpaSpringProjectApplication.class, args);
+		
+		UserRepository repository = context.getBean(UserRepository.class);
+		User user = new User();
+		user.setAge("20");
+		user.setName("Vikash");
+		user.setStatus("UnMarried");
+		
+		User user1 = repository.save(user);
+		System.out.println(user1);
+	}
+
+}

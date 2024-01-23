@@ -1,0 +1,5 @@
+package com.coder.entities;
+
+public class User {
+
+}

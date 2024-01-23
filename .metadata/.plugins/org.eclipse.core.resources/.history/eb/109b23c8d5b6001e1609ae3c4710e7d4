@@ -1,0 +1,12 @@
+package com.coder.ctrl;
+
+import org.springframework.stereotype.Controller;
+
+public class HomeCtrl {
+	@Controller
+	public String handle()
+	{
+		return "just for testing"
+	}
+
+}

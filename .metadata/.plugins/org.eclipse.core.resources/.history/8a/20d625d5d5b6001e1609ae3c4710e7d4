@@ -1,0 +1,16 @@
+package com.coder.ctrl;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeCtrl {
+	
+	@RequestMapping("/test")
+	public String handle()
+	{
+		int a = 60 , b = 40;
+		return "The sum of a+b"+(a+b);
+	}
+
+}
